@@ -48,7 +48,7 @@ calcExpr list = [(x^2)/2 | x <- list, (x^2)/2 > 10]
 
 --Converte espaçoes em traços em uma string
 trSpaces :: String -> String
-trSpaces str = [x | x <- str, x /= ' ']
+trSpaces str = [if x == ' ' then '-' else x | x <- str]
 --filter (/= ' ') str
 
 --Receba uma lista de tuplas e retorne apenas o segundo elemento
